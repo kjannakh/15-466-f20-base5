@@ -3,14 +3,15 @@ BLENDER="C:\Program Files\Blender Foundation\Blender 2.90\blender.exe"
 DIST=../dist
 
 all : \
-    $(DIST)/phone-bank.pnct \
-    $(DIST)/phone-bank.scene \
+    $(DIST)/game.pnct \
+    $(DIST)/game.scene \
+    $(DIST)/game.w
 
-$(DIST)/phone-bank.scene : phone-bank.blend export-scene.py
-    $(BLENDER) --background --python export-scene.py -- "phone-bank.blend:Platforms" "$(DIST)/phone-bank.scene"
+$(DIST)/game.scene : game.blend export-scene.py
+    $(BLENDER) --background --python export-scene.py -- "game.blend:Platforms" "$(DIST)/game.scene"
 
-$(DIST)/phone-bank.pnct : phone-bank.blend export-meshes.py
-    $(BLENDER) --background --python export-meshes.py -- "phone-bank.blend:Platforms" "$(DIST)/phone-bank.pnct" 
+$(DIST)/game.pnct : game.blend export-meshes.py
+    $(BLENDER) --background --python export-meshes.py -- "game.blend:Platforms" "$(DIST)/game.pnct" 
 
-$(DIST)/phone-bank.w : phone-bank.blend export-walkmeshes.py
-    $(BLENDER) --background --python export-walkmeshes.py -- "phone-bank.blend:WalkMeshes" "$(DIST)/phone-bank.w" 
+$(DIST)/game.w : game.blend export-walkmeshes.py
+    $(BLENDER) --background --python export-walkmeshes.py -- "game.blend:WalkMeshes" "$(DIST)/game.w" 
