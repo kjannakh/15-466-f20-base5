@@ -28,5 +28,5 @@ The left-hand side of the screen displays the latitude and longitude of detected
 
 Sources: I created all the assets myself using default shapes and vertex paint in Blender.
 
-This game was built with [NEST](NEST.md).
+This game was built with [NEST](NEST.md)..
 
